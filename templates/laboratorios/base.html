@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi sitio Django</title>
+</head>
+<body>
+  <header>
+    <h1>Mi sitio Django</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'laboratorio_list' %}">Laboratorios</a></li>
+        <!-- Agrega aquí más elementos de navegación -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>© Mi sitio Django 2023</p>
+  </footer>
+</body>
+</html>

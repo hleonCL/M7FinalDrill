@@ -1,0 +1,49 @@
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initialscale=1.0">
+ <title>Mostrar Laboratorios</title>
+</head>
+
+<body>
+ <h2 style="text-align:center"> Información de Laboratorios </h2>
+ <table align="center" style="margin: 0px auto;">
+ <thead>
+ <tr>
+ <th>Id de Laboratorio</th>
+ <th>Nombre</th>
+ <th>Ciudad</th>
+ <th>País</th>
+ <th>Editar</th>
+ <th>Eliminar</th>
+ </tr>
+ </thead>
+ <tbody>
+ {% for laboratorio in laboratorios %}
+ <tr>
+ <td>{{laboratorio.id}}</td>
+ <td>{{laboratorio.nombre}}</td>
+ <td>{{laboratorio.ciudad}}</td>
+ <td>{{laboratorio.pais}}</td>
+ <td><a href="{% url 'editar_laboratorio' laboratorio.id %}">Actualizar</a></td>
+ <td><a href="{% url 'eliminar_laboratorio' laboratorio.id %}">Eliminar</a></td>
+
+ </tr>
+ {% endfor %}
+
+ </tbody>
+
+ </table>
+<center>
+ <tr>
+ <th>
+    <p><a href="/agregar/">Agregar nuevo laboratorio</a></p>
+</th>
+</tr></center>
+</body>
+</html>
+
+

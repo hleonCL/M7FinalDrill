@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi sitio Django</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  {% bootstrap_messages %}
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" >
+</head>
+<body>
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href="{% url 'laboratorios' %}"><h2>Laboratorios</h2></a></li>
+        <img src="{% static 'logo.jpg' %}" alt="Logo" />
+        <!-- Agrega aquí más elementos de navegación -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    
+    {% endblock %}
+  </main>
+
+
+</body>
+</html>

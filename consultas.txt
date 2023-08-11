@@ -1,0 +1,34 @@
+test 
+python manage.py test
+
+consultas =
+○ Obtenga todos los objetos tanto Laboratorio, DirectorGeneral y Productos.
+
+# Obtenga todos los objetos Laboratorio
+laboratorios = Laboratorio.objects.all()
+
+# Obtenga todos los objetos DirectorGeneral
+directores_generales = DirectorGeneral.objects.all()
+
+# Obtenga todos los objetos Producto
+productos = Producto.objects.all()
+
+
+** *** **** ***** ***** ****** ******* ******* *******
+○ Obtenga el laboratorio del Producto cuyo nombre es ‘Producto 1’.
+
+producto = Producto.objects.get(nombre='Producto 1')
+laboratorio = producto.laboratorio
+
+** *** **** ***** ***** ****** ******* ******* *******
+○ Ordene todos los productos por nombre, y que muestre los valores de nombre y
+laboratorio.
+
+productos = Producto.objects.order_by('nombre').values('nombre', 'laboratorio')
+
+** *** **** ***** ***** ****** ******* ******* *******
+○ Realice una consulta que imprima por pantalla los laboratorios de todos los productos. 
+
+for producto in Producto.objects.all():
+    print(producto.laboratorio)
+

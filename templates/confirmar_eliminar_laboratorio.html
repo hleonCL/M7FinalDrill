@@ -1,0 +1,24 @@
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Eliminar Laboratorio</title>
+</head>
+<body>
+    <center><h2>¿Estás seguro de que deseas eliminar el laboratorio "{{laboratorio.nombre}}"?</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Sí, eliminar">
+    </form>
+
+    <br><br>
+
+    <a href="{% url 'laboratorios' %}">No, volver a la lista de laboratorios</a></center>
+
+</body>
+</html> 
+s

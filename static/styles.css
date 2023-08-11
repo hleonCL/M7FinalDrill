@@ -1,0 +1,67 @@
+
+        /* Agregar estilos a los elementos de formulario */
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Agregar estilos a los elementos de texto */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Agregar un contenedor alrededor del contenido y centrarlo en la página */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 180px;
+        }
+        header{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+
+
+        table {
+        border: 8px outset;
+ border-radius: 10px;
+ border-spacing: 10px;
+ padding: 20px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+ th,
+ td {
+ padding: 5px;
+ border: 1px solid;
+ }

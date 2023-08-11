@@ -1,0 +1,32 @@
+{% include 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Laboratorio</title>
+
+    <!-- Copiar el código CSS de la plantilla HTML para agregar un nuevo laboratorio -->
+</head>
+<body>
+    <!-- Agregar un contenedor alrededor del contenido -->
+    <div class="container">
+        <h2>Editar Laboratorio</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            Nombre: <input type="text" name="nombre" value="{{laboratorio.nombre}}"><br><br>
+            Ciudad: <input type="text" name="ciudad" value="{{laboratorio.ciudad}}"><br><br>
+            País: <input type="text" name="pais" value="{{laboratorio.pais}}"><br><br>
+
+            <input type="submit" value="Guardar cambios">
+        </form>
+
+        <br><br>
+
+        <a href="{% url 'laboratorios' %}">Volver a la lista de laboratorios</a>
+    </div>
+
+</body>
+</html> 
